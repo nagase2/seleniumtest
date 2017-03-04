@@ -22,11 +22,11 @@ public class Selenium3Sample {
 		//driver.manage().timeouts().implicitlyWait(2, TimeUnit.SECONDS);
 //		driver.findElement(By.id("lst-ib")).sendKeys("Selenium4");
 //		driver.findElement(By.id("lst-ib")).submit();
-		System.out.println("š"+driver.getTitle());
+		System.out.println("â˜…"+driver.getTitle());
 		
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		if(driver!=null) {
-			System.out.println("ƒhƒ‰ƒCƒo[‚ðI—¹‚µ‚Ü‚·B");
+			System.out.println("ãƒ‰ãƒ©ã‚¤ãƒãƒ¼ã‚’çµ‚äº†ã—ã¾ã™ã€‚");
 			driver.quit();
 			//driver.close();
 		}
@@ -40,9 +40,9 @@ public class Selenium3Sample {
 		
 		driver.navigate().to("http://corporate.fromjapan.co.jp/ja/");
 		
-		System.out.println("š"+driver.getTitle());
+		System.out.println("â˜…"+driver.getTitle());
 		if(driver!=null) {
-			System.out.println("ƒhƒ‰ƒCƒo[‚ðI—¹‚µ‚Ü‚·B");
+			System.out.println("ãƒ‰ãƒ©ã‚¤ãƒãƒ¼ã‚’çµ‚äº†ã—ã¾ã™ã€‚");
 			driver.quit();
 		}
 	}
@@ -55,9 +55,9 @@ public class Selenium3Sample {
 		
 		driver.navigate().to("http://corporate.fromjapan.co.jp/ja/");
 		
-		System.out.println("š"+driver.getTitle());
+		System.out.println("â˜…"+driver.getTitle());
 		if(driver!=null) {
-			System.out.println("ƒhƒ‰ƒCƒo[‚ðI—¹‚µ‚Ü‚·B");
+			System.out.println("ãƒ‰ãƒ©ã‚¤ãƒãƒ¼ã‚’çµ‚äº†ã—ã¾ã™ã€‚");
 			driver.quit();
 		}
 	}

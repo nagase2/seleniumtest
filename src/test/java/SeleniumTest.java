@@ -17,15 +17,15 @@ public class SeleniumTest {
 
     @Test
     public void testSelenium() {
-        // ƒhƒ‰ƒCƒo‚ğ¶¬
+        // ãƒ‰ãƒ©ã‚¤ãƒã‚’ç”Ÿæˆ
         WebDriver driver = new FirefoxDriver();
-        // ƒ^ƒCƒ€ƒAƒEƒg‚ğİ’è
+        // ã‚¿ã‚¤ãƒ ã‚¢ã‚¦ãƒˆã‚’è¨­å®š
         driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
-        // ƒEƒCƒ“ƒhƒE‚ğÅ‘å‰»
+        // ã‚¦ã‚¤ãƒ³ãƒ‰ã‚¦ã‚’æœ€å¤§åŒ–
         driver.manage().window().maximize();
-        // ‰æ–Ê‘JˆÚ
+        // ç”»é¢é·ç§»
         driver.get("http://www.yahoo.co.jp");
-        // yahoo‚ÌƒXƒNƒŠ[ƒ“ƒVƒ‡ƒbƒg‚ğ/tmp‚É•Û‘¶
+        // yahooã®ã‚¹ã‚¯ãƒªãƒ¼ãƒ³ã‚·ãƒ§ãƒƒãƒˆã‚’/tmpã«ä¿å­˜
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File destFile = new File("F:\\trash\\test.png");
         try {
@@ -33,7 +33,7 @@ public class SeleniumTest {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        // ƒhƒ‰ƒCƒo‚ğI—¹
+        // ãƒ‰ãƒ©ã‚¤ãƒã‚’çµ‚äº†
         driver.quit();
     }
 }
