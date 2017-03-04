@@ -30,12 +30,15 @@ dependencies {
     
     compile group: 'com.google.guava', name: 'guava', version: '17.0'
     compile group: 'joda-time', name: 'joda-time', version: '2.3'
-    compile 'org.seleniumhq.selenium:selenium-server:2.53.1'
-    compile 'org.seleniumhq.selenium:selenium-remote-driver:2.53.1'
-    compile 'org.seleniumhq.selenium:selenium-java:2.53.1'
+    compile 'org.seleniumhq.selenium:selenium-server:3.2.0'
+    compile 'org.seleniumhq.selenium:selenium-remote-driver:3.2.0'
+    compile 'org.seleniumhq.selenium:selenium-java:3.2.0'
     compile 'org.seleniumhq.selenium:selenium-api:2.53.1'
-	compile 'org.seleniumhq.selenium:selenium-firefox-driver:2.53.1'
-	compile 'org.seleniumhq.selenium:selenium-chrome-driver:2.53.1'
+	compile 'org.seleniumhq.selenium:selenium-firefox-driver:3.2.0'
+	compile 'org.seleniumhq.selenium:selenium-chrome-driver:3.2.0'
+	
+	compile group: 'com.codeborne', name: 'phantomjsdriver', version: '1.4.1'
+	
     
     // Use JUnit test framework
     testCompile 'junit:junit:4.12'
