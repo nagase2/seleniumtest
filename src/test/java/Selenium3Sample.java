@@ -13,7 +13,7 @@ public class Selenium3Sample {
 	public void chromeTest() throws InterruptedException {
 		
 		
-		System.setProperty("webdriver.chrome.driver", "./exe/chromedriver.exe");
+		//System.setProperty("webdriver.chrome.driver", "./exe/chromedriver.exe");
 		//DesiredCapabilities cap = DesiredCapabilities.firefox();
 	//	cap.setCapability("marionette", true);
 		WebDriver driver = new ChromeDriver();
@@ -35,7 +35,7 @@ public class Selenium3Sample {
 	@Test
 	public void firefoxTest2() throws InterruptedException {
 		
-		//System.setProperty("webdriver.gecko.driver", "./exe/geckodriver.exe");
+		//System.setProperty("webdriver.gecko.driver", "./exe/chromedriver.exe");
 		WebDriver driver = new FirefoxDriver();
 		
 		driver.navigate().to("http://corporate.fromjapan.co.jp/ja/");
@@ -46,10 +46,10 @@ public class Selenium3Sample {
 			driver.quit();
 		}
 	}
-	@Test
 	
+	@Test
 	public void phantomTest() throws InterruptedException {
-		System.setProperty("phantomjs.binary.path", "./exe/phantomjs.exe");
+		//System.setProperty("phantomjs.binary.path", "./exe/phantomjs.exe");
 		
 		WebDriver driver = new PhantomJSDriver();
 		
