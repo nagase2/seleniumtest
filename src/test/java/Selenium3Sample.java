@@ -1,7 +1,10 @@
+import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -9,7 +12,7 @@ import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 public class Selenium3Sample {
-	@Test
+	//@Test
 	public void chromeTest() throws InterruptedException {
 		
 		
@@ -55,6 +58,9 @@ public class Selenium3Sample {
 		
 		driver.navigate().to("http://corporate.fromjapan.co.jp/ja/");
 		
+		  File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+	      File destFile = new File("./phantomtest.png");
+	        
 		System.out.println("★"+driver.getTitle());
 		if(driver!=null) {
 			System.out.println("ドライバーを終了します。");
