@@ -63,8 +63,9 @@ public class Selenium3Sample {
 
 		driver.navigate().to("http://corporate.fromjapan.co.jp/ja/");
 		
-		 driver.manage().window().setSize(new Dimension(1200,900));
-		
+		// driver.manage().window().setSize(new Dimension(1200,900));
+		driver.manage().window().maximize();
+		 
 		 File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		File destFile = new File("./phantomtest.png");
 		try {
