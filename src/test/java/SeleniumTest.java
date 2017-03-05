@@ -27,7 +27,7 @@ public class SeleniumTest {
         driver.get("http://www.yahoo.co.jp");
         // yahooのスクリーンショットを/tmpに保存
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-        File destFile = new File("screenshottest.png");
+        File destFile = new File("./testresult/firefoxtest.png");
         try {
             Files.move(srcFile, destFile);
         } catch (IOException e) {
