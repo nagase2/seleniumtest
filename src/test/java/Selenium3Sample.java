@@ -49,6 +49,16 @@ public class Selenium3Sample {
 		driver.navigate().to("http://www.yahoo.co.jp");
 
 		System.out.println("★" + driver.getTitle());
+		
+		 
+		 File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File destFile = new File("./testresult/firefoxtest2.png");
+		try {
+			Files.move(srcFile, destFile);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		
 		if (driver != null) {
 			System.out.println("ドライバーを終了します。");
 			driver.quit();
@@ -61,7 +71,7 @@ public class Selenium3Sample {
 
 		WebDriver driver = new PhantomJSDriver();
 
-		driver.navigate().to("http://www.yahoo.co.jp");
+		driver.navigate().to("http://b.hatena.ne.jp/hotentry");
 		
 		// driver.manage().window().setSize(new Dimension(1200,900));
 		driver.manage().window().maximize();
