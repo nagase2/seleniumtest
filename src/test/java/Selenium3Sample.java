@@ -46,7 +46,7 @@ public class Selenium3Sample {
 		// "./exe/chromedriver.exe");
 		WebDriver driver = new FirefoxDriver();
 
-		driver.navigate().to("http://www.yahoo.co.jp");
+		driver.navigate().to("http://b.hatena.ne.jp/hotentry");
 
 		System.out.println("★" + driver.getTitle());
 		
