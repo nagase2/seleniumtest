@@ -7,4 +7,5 @@ gradle/
 .settings/
 .project
 /trash
-testresult/*.png
+testresult/**.png
+phantomtest.png

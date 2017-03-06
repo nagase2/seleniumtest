@@ -6,10 +6,16 @@ import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
 import org.junit.Test;
+import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebDriverException;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.google.common.io.Files;
 
@@ -24,13 +30,26 @@ public class SeleniumTest {
         // ウインドウを最大化
         driver.manage().window().maximize();
         // 画面遷移
-        driver.get("http://www.yahoo.co.jp");
+        driver.get("https://www.hatena.ne.jp/login");
+        WebElement user = driver.findElement(By.id("login-name"));
+        user.sendKeys("nagase2.mobile@gmail.com");
+        
+        WebElement pass = driver.findElement(By.className("password"));
+        pass.sendKeys("nagase222");
+        
+        WebElement btn = driver.findElement(By.className("submit-button"));
+        btn.click();
+        
+        //proile
+        WebDriverWait wait = new WebDriverWait(driver, 30);
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("profile-image")));
+        
         // yahooのスクリーンショットを/tmpに保存
         File srcFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
         File destFile = new File("./testresult/firefoxtest.png");
         try {
             Files.move(srcFile, destFile);
-        } catch (IOException e) {
+        } catch (IOException e) {                                                                                                                                                                                                                                                                                                
             throw new RuntimeException(e);
         }
         // ドライバを終了
