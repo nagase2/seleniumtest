@@ -1,5 +1,11 @@
 pipeline {
-  
+  agent {
+    node {
+      
+
+    }
+    
+  }
   stages {
     stage('aaa') {
       steps {
