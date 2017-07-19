@@ -1,10 +1,5 @@
 pipeline {
-  agent {
-    node {
-      label 'qq'
-    }
-    
-  }
+  
   stages {
     stage('aaa') {
       steps {
